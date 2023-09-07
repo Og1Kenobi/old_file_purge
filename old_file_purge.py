@@ -19,6 +19,6 @@ def delete_old_files(directory):
                 print(f"Deleted file: {file_path}")
 
 # Provide the directory path where you want to delete files older than 6 months
-directory_path = "cd /var/www/html/newbeckyslist/wordpress/wp-content/uploads/becky_receipts/"
+directory_path = ""
 
 delete_old_files(directory_path)
