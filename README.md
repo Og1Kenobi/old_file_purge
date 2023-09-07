@@ -9,4 +9,3 @@ After traversing the entire directory, the function checks if any files were fou
 
 If there are any errors accessing or deleting files, it prints an error message.
 
-Let me know if you have any specific questions about this code.
