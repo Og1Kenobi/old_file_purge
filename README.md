@@ -1,9 +1,12 @@
 # old_file_purge
+This is a Python script that deletes files from a specified directory that are older than a certain number of days.
 
-Just make sure to replace "/path/to/directory" with the actual path to the directory where you want to delete the files.
+The script takes two command-line arguments: the directory path and the age threshold (in days). It then calls the delete_old_files() function with the directory path and age threshold as arguments.
 
-After providing the correct directory path, you can execute the script. It will delete the files in the specified directory that are older than six months (based on the modification time).
+The delete_old_files() function walks through the directory recursively using os.walk(). For each file, it checks the modification time using os.path.getmtime() and compares it with the age threshold. If the modification time is older than the age threshold, the file path is added to a list of files to be deleted.
 
-Remember to uncomment the desired timedelta line (e.g., six_months_ago, one_week_ago, or one_year_ago) based on the desired time period for file deletion.
+After traversing the entire directory, the function checks if any files were found to be deleted. If no files are found, it prints a message and exits. Otherwise, it displays the list of files to be deleted and prompts the user for confirmation. If the user confirms, it deletes each file using os.remove().
 
-Please exercise caution when using this script, as it will permanently delete files. Ensure that you have appropriate backups in place or test it on a non-production directory.
+If there are any errors accessing or deleting files, it prints an error message.
+
+Let me know if you have any specific questions about this code.
